@@ -1,0 +1,20 @@
+{% extends 'protwo/base.html' %}
+
+
+{% block content %}
+
+<h1>User detail page</h1>
+
+<a class="btn btn-default" href="{% url 'user_edit' pk=user.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+
+    {% if user %}
+        <h2> User:  {{user.name }}   {{ user.lastname }}  </h2>
+        <p> {{ user.email }} </p>
+
+
+    {% endif %}
+
+
+
+{% endblock %}
